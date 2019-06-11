@@ -8,8 +8,12 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
-import Header from './components/header';
-import Footer from './components/footer';
+import HomeScreen from './components/home';
+import SermonScreen from './components/sermon';
+import EventScreen from './components/events';
+
+
+import { createAppContainer, createStackNavigator } from 'react-navigation'; 
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,73 +23,44 @@ import Footer from './components/footer';
 // });
 
 
+
+const RootStack = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen,
+    },
+    Sermons: {
+      screen: SermonScreen,
+    },
+    Events: {
+      screen: EventScreen,
+    },
+    // Give: {
+    //   screen: GiveScreen,
+    // }
+  },
+  {
+    initialRouteName: 'Home',
+  }
+);
+
+const AppContainer = createAppContainer(RootStack);
+
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.container}>
-        <Header/>
-        <View style={styles.sermons}>
-          <Text style={styles.frontPage}>Sermon</Text>
-        </View>
-        <View style={styles.events}>
-          <Text style={styles.frontPage}>Events</Text>
-        </View>
-        <View style={styles.music}>
-          <Text style={styles.frontPage}>Music</Text>
-        </View>
-        <View style={styles.give}>
-          <Text style={styles.frontPage}>Give</Text>
-        </View>
-        <Footer/>
-      </View>
+        <AppContainer/>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-
-  },
-  frontPage: {
-    fontSize: 50,
-    color: 'white',
-  },
-  sermons: {
-    flex: 1, 
-    backgroundColor: 'powderblue',
-    display: 'flex', 
-    justifyContent: 'flex-end', 
-    alignItems: 'flex-start',
-    paddingBottom: 10,
-    paddingLeft: 25,
-
-  },
-  events: {
-    flex: 1, 
-    backgroundColor: 'skyblue',
-    display: 'flex', 
-    justifyContent: 'flex-end', 
-    alignItems: 'flex-start',
-    paddingBottom: 10,
-    paddingLeft: 25,
-  },
-  music: {
-    flex: 1, 
-    backgroundColor: 'steelblue',
-    display: 'flex', 
-    justifyContent: 'flex-end', 
-    alignItems: 'flex-start',
-    paddingBottom: 10,
-    paddingLeft: 25,
-  },
-  give: {
-    flex: 1, 
-    backgroundColor: 'dodgerblue',
-    display: 'flex', 
-    justifyContent: 'flex-end', 
-    alignItems: 'flex-start',
-    paddingBottom: 10,
-    paddingLeft: 25,
+  route: {
+    shadowRadius: 0,
+    shadowColor: 'transparent',
+    shadowOffset: {
+      height: 0,
+    },
+    backgroundColor: 'black'
   },
 });
