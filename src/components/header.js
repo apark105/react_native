@@ -16,16 +16,16 @@ export default class Header extends Component{
 
 const styles = StyleSheet.create({
   header: {
-    height: 125,
+    height: 100,
     // backgroundColor: '#F5FCFF',
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
     color: 'black',
     // paddingBottom: 5,
   },
   wjbc: {
-      height: '60%',
+      height: '70%',
       width: '50%',
   },
   title: {
