@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import Header from './header';
@@ -88,3 +89,4 @@ export default class Home extends Component{
     },
   });
   
+

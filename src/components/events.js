@@ -76,4 +76,3 @@ export default class Events extends Component{
       paddingLeft: 25,
     },
   });
-  

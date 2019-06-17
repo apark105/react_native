@@ -11,8 +11,6 @@ import { createStackNavigator, createAppContainer, createBottomTabNavigator } fr
 import Home from './components/home';
 import Resources from './components/resources';
 
-
-
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -66,3 +64,4 @@ export default class App extends Component {
     return <AppContainer />;
   }
 }
+

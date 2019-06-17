@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, Button } from 'react-native';
 
 
 export default class Footer extends Component {
@@ -7,9 +7,8 @@ export default class Footer extends Component {
         return (
             <View style={styles.footer}>
                 {/* <Text style={styles.title}>Footer</Text> */}
-                <View style={styles.clicked}>
+                <View  style={styles.clicked}>
                     <Image style={styles.home} source={require('../assets/images/home.png')} />
-
                 </View>
                 <View>
                     <Image style={styles.play} source={require('../assets/images/play.png')} />
