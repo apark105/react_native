@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 import Header from './header';
 import Footer from './footer';
 import PrayerWall from './prayer';
 import Music from './music';
 import Sermon from './sermon';
+import Events from './events';
 
-export default class Events extends Component{
+export default class Resources extends Component{
     render() {
       return (
         <View style={styles.container}>
@@ -76,3 +77,4 @@ export default class Events extends Component{
       paddingLeft: 25,
     },
   });
+  

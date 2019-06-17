@@ -7,7 +7,6 @@ export default class Header extends Component{
     return (
       <View style={styles.header}>
           <Image style={styles.wjbc} source={require('../assets/images/wjbc.png')} />
-
           {/* <Text style={styles.title}>WJBC</Text> */}
       </View>
     );
@@ -16,7 +15,7 @@ export default class Header extends Component{
 
 const styles = StyleSheet.create({
   header: {
-    height: 100,
+    height: 70,
     // backgroundColor: '#F5FCFF',
     display: 'flex',
     justifyContent: 'center',
@@ -25,8 +24,8 @@ const styles = StyleSheet.create({
     // paddingBottom: 5,
   },
   wjbc: {
-      height: '70%',
-      width: '50%',
+      height: '60%',
+      width: '30%',
   },
   title: {
     fontSize: 50,

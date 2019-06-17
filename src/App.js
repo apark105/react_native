@@ -1,19 +1,15 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
-import HomeScreen from './components/home';
-import SermonScreen from './components/sermon';
-import EventScreen from './components/events';
-
-
-import { createAppContainer, createStackNavigator } from 'react-navigation'; 
+import React, { Component } from 'react'
+// import { Platform, StyleSheet, Text, View } from 'react-native';
+// import Header from './components/header';
+// import Footer from './components/footer';
+import { createStackNavigator, createAppContainer, createBottomTabNavigator } from "react-navigation";
+// import PrayerWall from './components/prayer';
+// import Music from './components/music';
+// import Sermon from './components/sermon';
+// import Events from './components/events';
+import Home from './components/home';
+import Resources from './components/resources';
 
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -26,41 +22,46 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 const RootStack = createStackNavigator(
   {
-    Home: {
-      screen: HomeScreen,
+    HomeScreen: {
+      screen: Home,
     },
-    Sermons: {
-      screen: SermonScreen,
+    ResourceScreen: {
+      screen: Resources,
     },
-    Events: {
-      screen: EventScreen,
-    },
-    // Give: {
-    //   screen: GiveScreen,
-    // }
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'HomeScreen',
   }
+);
+
+export default createAppContainer(
+  createBottomTabNavigator(
+    {
+      HomeScreen: {
+        screen: Home,
+      },
+      ResourceScreen: {
+        screen: Resources,
+      },
+    },
+    {
+      defaultNavigationOptions: ({ navigation }) => ({
+        tabBarIcon: ({ focused, tintColor }) =>
+          getTabBarIcon(navigation, focused, tintColor),
+      }),
+      tabBarOptions: {
+        activeTintColor: 'tomato',
+        inactiveTintColor: 'gray',
+      },
+    }
+  )
 );
 
 const AppContainer = createAppContainer(RootStack);
 
-export default class App extends Component<Props> {
+export default class App extends Component {
   render() {
-    return (
-        <AppContainer/>
-    );
+    return <AppContainer />;
   }
 }
 
-const styles = StyleSheet.create({
-  route: {
-    shadowRadius: 0,
-    shadowColor: 'transparent',
-    shadowOffset: {
-      height: 0,
-    },
-    backgroundColor: 'black'
-  },
-});
