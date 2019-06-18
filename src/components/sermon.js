@@ -23,7 +23,6 @@ export default class Sermon extends Component{
           <View style={styles.give}>
             <Text style={styles.frontPage}>Prayer Wall</Text>
           </View>
-          <Footer/>
         </View>
       );
     }

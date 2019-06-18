@@ -24,7 +24,6 @@ export default class Resources extends Component{
           <View style={styles.give}>
             <Text style={styles.frontPage}>Prayer Wall</Text>
           </View>
-          <Footer/>
         </View>
       );
     }

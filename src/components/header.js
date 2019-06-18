@@ -15,7 +15,7 @@ export default class Header extends Component{
 
 const styles = StyleSheet.create({
   header: {
-    height: 70,
+    height: 150,
     // backgroundColor: '#F5FCFF',
     display: 'flex',
     justifyContent: 'center',
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
     // paddingBottom: 5,
   },
   wjbc: {
-      height: '60%',
-      width: '30%',
+      height: '45%',
+      width: '50%',
   },
   title: {
     fontSize: 50,
