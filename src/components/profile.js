@@ -3,25 +3,16 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
 import Header from './header';
 import Footer from './footer';
 import PrayerWall from './prayer';
-import Sermon from './sermon';
+import Music from './music';
 import Events from './events';
 
-export default class Music extends Component{
+export default class Profile extends Component{
     render() {
       return (
         <View style={styles.container}>
           <Header/>
-          <View style={styles.sermons}>
-            <Text style={styles.frontPage}>Sermon</Text>
-          </View>
-          <View style={styles.events}>
-            <Text style={styles.frontPage}>Events</Text>
-          </View>
           <View style={styles.music}>
-            <Text style={styles.frontPage}>Music</Text>
-          </View>
-          <View style={styles.give}>
-            <Text style={styles.frontPage}>Prayer Wall</Text>
+            <Text style={styles.frontPage}>Profile</Text>
           </View>
         </View>
       );
@@ -76,3 +67,4 @@ export default class Music extends Component{
     },
   });
   
+
