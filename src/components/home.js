@@ -18,12 +18,31 @@ export default class Home extends Component {
           
           <View style={styles.sermonFeedContainer}>
             <View style={styles.sermonFeed}>
+              <View style={styles.contentTitle}>
+                <Text onPress={() => this.props.navigation.navigate('ResourceScreen')} style={styles.homeFont}>What is Prayer?</Text>
+              </View>
             </View>
-          </View>
-          <View style={styles.contentTitle}>
-            <Text onPress={() => this.props.navigation.navigate('ResourceScreen')} style={styles.homeFont}>What is Prayer?</Text>
+
+            <View style={styles.category}>
+                <Text onPress={() => this.props.navigation.navigate('ResourceScreen')} style={styles.categoryFont}>Sermon</Text>
+              </View>
           </View>
 
+          <View style={styles.sermonFeedContainer}>
+            <View style={styles.sermonFeed}>
+              <View style={styles.contentTitle}>
+                <Text onPress={() => this.props.navigation.navigate('ResourceScreen')} style={styles.homeFont}>Blah Blah Blah</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.sermonFeedContainer}>
+            <View style={styles.sermonFeed}>
+              <View style={styles.contentTitle}>
+                <Text onPress={() => this.props.navigation.navigate('ResourceScreen')} style={styles.homeFont}>LaLa Land</Text>
+              </View>
+            </View>
+          </View>
           
 
         </View>
@@ -41,23 +60,26 @@ const styles = StyleSheet.create({
   },
   contentTitle: {
     // backgroundColor: 'blue',
-    paddingLeft: 20,
+    paddingRight: 20,
     paddingTop: 15,
+    alignItems: 'flex-end',
+    width: '100%',
+    // justifyContent: 'center'
   },
   feed: {
-    paddingBottom: 15,
     fontSize: 50,
     paddingLeft: 25,
     color: 'black',
   },
   sermonFeedContainer: {
+    paddingTop: 15,
     alignItems: 'center',
   },
   sermonFeed: {
     // flex: 1, 
     height: 125,
     width: '90%',
-    backgroundColor: 'skyblue',
+    backgroundColor: 'steelblue',
     alignItems: 'center',
     paddingBottom: 10,
     // paddingLeft: 25,
@@ -65,7 +87,11 @@ const styles = StyleSheet.create({
   },
   homeFont: {
     fontSize: 25,
-
+    alignItems: 'center',
+    color: 'white',
+  },
+  categoryFont: {
+    color: 'black',
   }
 
 });

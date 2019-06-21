@@ -69,7 +69,7 @@ const AppContainer = createAppContainer(createBottomTabNavigator(
             tabBarIcon: ({ tintColor }) => <Icon name="Home" />
           }
         },
-        Resource: {
+        Resources: {
           screen: Resources,
           navigationOptions: {
             tabBarIcon: ({ tintColor }) => <Icon name="Resources" />
